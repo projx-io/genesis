@@ -12,7 +12,8 @@
     <testsuites>
         <testsuite>
             <directory>test/unit</directory>
-            <directory>test/e2e</directory>
+            <directory>test/integration</directory>
+            <directory>test/system</directory>
         </testsuite>
     </testsuites>
     <filter>
