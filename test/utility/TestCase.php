@@ -14,9 +14,9 @@ class TestCase extends PHPUnit_Framework_TestCase
         Mockery::close();
     }
 
-    public function mock($class, array $methods = [])
+    public function mock($class = null, array $methods = [])
     {
-        $mock = Mockery::mock($class);
+        $mock = $class ? Mockery::mock($class) : Mockery::mock();
         $spies = (object)[];
         array_map(function ($method) use ($mock, $spies) {
             return $spies->{$method} = $mock->shouldReceive($method);
