@@ -6,7 +6,7 @@ interface Director extends Builder
 {
     /**
      * @param mixed $script
-     * @return Director
+     * @return $this
      */
     public function direct($script);
 }
