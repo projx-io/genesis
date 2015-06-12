@@ -29,12 +29,5 @@ class MethodObjectMutatorTest extends TestCase
         $object->{$method}->withArgs($arguments)->once();
         $mutator = new MethodObjectMutator();
         $mutator->set($object->mock, $method, $arguments);
-
-//        $object = $this->mock();
-//        $nextMutator = $this->mock('Projx\Genesis\ObjectMutator', ['set']);
-//        $nextMutator->set->with($object, $method, $arguments)->once();
-//        $mutator = new MethodMutator($method, $nextMutator->mock);
-//        $actual = $mutator->set($object, $arguments);
-//        $this->assertEquals($mutator, $actual);
     }
 }
