@@ -2,13 +2,15 @@
 
 namespace Projx\Genesis;
 
+use Test\Utility\TestCase;
+
 class ClassFactoryContainerTest extends TestCase
 {
     public function dataProvider()
     {
-        $classA = 'Projx\Genesis\FakeClassA';
-        $classB = 'Projx\Genesis\FakeNamespace\FakeClassB';
-        $classC = 'Projx\Genesis\FakeNamespace\AnotherFakeNamespace\FakeClassC';
+        $classA = 'Test\Fake\FakeClassA';
+        $classB = 'Test\Fake\FakeNamespace\FakeClassB';
+        $classC = 'Test\Fake\FakeNamespace\AnotherFakeNamespace\FakeClassC';
 
         $class = 'Projx\Genesis\Factory';
         $methods = ['make'];

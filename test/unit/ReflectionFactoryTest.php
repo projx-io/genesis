@@ -2,17 +2,19 @@
 
 namespace Projx\Genesis;
 
+use Test\Utility\TestCase;
+
 class ReflectionFactoryTest extends TestCase
 {
     public function dataProvider()
     {
         return [
-            ['Projx\Genesis\FakeClassA', ['a', 'b', 'c']],
-            ['Projx\Genesis\FakeClassA', ['a', 'b', 'c', 'd']],
-            ['Projx\Genesis\FakeNamespace\FakeClassB', ['a', 'b', 'c']],
-            ['Projx\Genesis\FakeNamespace\FakeClassB', ['a', 'b', 'c', 'd']],
-            ['Projx\Genesis\FakeNamespace\AnotherFakeNamespace\FakeClassC', ['a', 'b', 'c']],
-            ['Projx\Genesis\FakeNamespace\AnotherFakeNamespace\FakeClassC', ['a', 'b', 'c', 'd']],
+            ['Test\Fake\FakeClassA', ['a', 'b', 'c']],
+            ['Test\Fake\FakeClassA', ['a', 'b', 'c', 'd']],
+            ['Test\Fake\FakeNamespace\FakeClassB', ['a', 'b', 'c']],
+            ['Test\Fake\FakeNamespace\FakeClassB', ['a', 'b', 'c', 'd']],
+            ['Test\Fake\FakeNamespace\AnotherFakeNamespace\FakeClassC', ['a', 'b', 'c']],
+            ['Test\Fake\FakeNamespace\AnotherFakeNamespace\FakeClassC', ['a', 'b', 'c', 'd']],
         ];
     }
 

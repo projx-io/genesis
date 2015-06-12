@@ -1,8 +1,8 @@
 <?php
 
-namespace Projx\Genesis\FakeNamespace\AnotherFakeNamespace;
+namespace Test\Fake\FakeNamespace\AnotherFakeNamespace;
 
-use Projx\Genesis\FakeClassA;
+use Test\Fake\FakeClassA;
 
 class FakeClassC extends FakeClassA
 {

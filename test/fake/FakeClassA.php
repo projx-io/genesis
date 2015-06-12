@@ -1,6 +1,6 @@
 <?php
 
-namespace Projx\Genesis;
+namespace Test\Fake;
 
 class FakeClassA
 {

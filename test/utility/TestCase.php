@@ -1,6 +1,6 @@
 <?php
 
-namespace Projx\Genesis;
+namespace Test\Utility;
 
 use Mockery;
 use PHPUnit_Framework_TestCase;
