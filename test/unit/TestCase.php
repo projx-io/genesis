@@ -24,4 +24,9 @@ class TestCase extends PHPUnit_Framework_TestCase
         $spies->mock = $mock;
         return $spies;
     }
+
+    public function testTrue()
+    {
+        $this->assertTrue(true);
+    }
 }

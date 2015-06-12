@@ -2,7 +2,7 @@
 
 namespace Projx\Genesis;
 
-class ReflectionFactoryUnitTest extends TestCase
+class FactoryBuilderTest extends TestCase
 {
     public function dataProvider()
     {
@@ -21,11 +21,14 @@ class ReflectionFactoryUnitTest extends TestCase
      * @param array $arguments
      * @dataProvider dataProvider
      */
-    public function testMakeFakeClass($class, $arguments)
+    public function testMakeFakeClassA($class, $arguments)
     {
-        $factory = new ReflectionFactory($class);
-        $actual = $factory->make($arguments);
+        $factory = $this->mock('Projx\Genesis\ClassFactory', ['make']);
+        $factory->make->with($class, $arguments)->once()->andReturn($this->mock($class)->mock);
+        $builder = new FactoryBuilder($factory->mock);
+        $builder->name($class);
+        array_map([$builder, 'argument'], $arguments);
+        $actual = $builder->build();
         $this->assertInstanceOf($class, $actual);
-        $this->assertEquals($actual->arguments, $arguments);
     }
 }

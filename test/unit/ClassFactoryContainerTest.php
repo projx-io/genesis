@@ -2,7 +2,7 @@
 
 namespace Projx\Genesis;
 
-class ClassFactoryContainerUnitTest extends TestCase
+class ClassFactoryContainerTest extends TestCase
 {
     public function dataProvider()
     {
