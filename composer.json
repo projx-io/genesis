@@ -1,0 +1,31 @@
+{
+  "name": "projx/genesis",
+  "description": "creation library for php",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Terrence Howard",
+      "email": "chemisus@gmail.com"
+    }
+  ],
+  "require-dev": {
+    "phpunit/phpunit": "*",
+    "mockery/mockery": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Projx\\Genesis\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Projx\\Genesis\\": [
+        "test/unit",
+        "test/integration",
+        "test/system",
+        "test/fake"
+      ]
+    }
+  }
+}
